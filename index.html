@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Traversal Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Graph Traversal Visualizer</h1>
+
+        <p class="subtitle">
+            Visualize Breadth First Search (BFS) and Depth First Search (DFS)
+        </p>
+
+        <div class="controls">
+
+            <label for="startNode">Starting Node:</label>
+
+            <input
+                type="text"
+                id="startNode"
+                placeholder="Enter node e.g. A"
+                maxlength="1"
+            >
+
+            <button onclick="runBFS()">Run BFS</button>
+
+            <button onclick="runDFS()">Run DFS</button>
+
+            <button onclick="resetGraph()">Reset</button>
+
+        </div>
+
+        <div class="graph-container">
+
+            <h2>Graph</h2>
+
+            <div id="graph">
+                <!-- Graph nodes will appear here -->
+            </div>
+
+        </div>
+        <div class="info-panel">
+
+    <h2>Algorithm Information</h2>
+
+    <div class="algorithm-info">
+
+        <div class="info-box">
+            <h3>BFS</h3>
+            <p>
+                Breadth First Search visits nodes level by level.
+                It uses a queue data structure.
+            </p>
+            <p><strong>Time:</strong> O(V + E)</p>
+            <p><strong>Space:</strong> O(V)</p>
+        </div>
+
+        <div class="info-box">
+            <h3>DFS</h3>
+            <p>
+                Depth First Search explores one branch deeply before
+                backtracking. It uses recursion or a stack.
+            </p>
+            <p><strong>Time:</strong> O(V + E)</p>
+            <p><strong>Space:</strong> O(V)</p>
+        </div>
+
+    </div>
+
+</div>
+
+       <div class="result">
+
+    <h2>Traversal Result</h2>
+
+    <p id="algorithmStatus">
+        Current Algorithm: None
+    </p>
+
+    <p id="startStatus">
+        Starting Node: -
+    </p>
+
+    <p id="result">
+        Select BFS or DFS to start traversal.
+    </p>
+
+    <div class="data-structure">
+        <h3 id="structureTitle">Data Structure</h3>
+        <p id="structureContent">-</p>
+    </div>
+
+</div>
+<div class="statistics">
+    <h2>Traversal Statistics</h2>
+    <p id="nodesVisisted">Nodes Visited:
+    0</p>
+        
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
